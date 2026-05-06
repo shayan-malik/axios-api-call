@@ -7,7 +7,6 @@ body{
 }
 
 
-
 header{
   display: flex;
   justify-content: space-between;
@@ -17,14 +16,14 @@ header{
   background-color: rgb(43, 42, 42);
   color: white;
 }
-ul{
+header ul{
   display: flex;
   gap: 25px;
   justify-content: space-between;
   list-style: none;
 }
 
-li{
+header li{
   cursor: pointer;
   font-size: 18px;
   position: relative;
@@ -33,7 +32,7 @@ li{
 
 }
 
-li::after{
+header li::after{
   content: "";
   position: absolute;
   left: 0;
@@ -44,13 +43,14 @@ li::after{
   transition: all 0.5s ease-in-out;
 }
 
-li:hover::after{
+header li:hover::after{
   width: 100%;
 }
 
 
 .cards{
   display: flex;
+  padding: 20px;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
@@ -144,4 +144,62 @@ li:hover::after{
 
 .detail h4{
   padding-bottom: 10px;
+}
+
+
+footer{
+  background-color: rgb(43, 42, 42);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  padding-right: 60px;
+  margin-top: 40px;
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+footer .App-logo{
+  height: 30vmin;
+}
+
+
+footer nav ul li{
+  font-size: 17px;
+  color: white;
+}
+
+footer h1{
+  color: white;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+
+
+footer .logo li{
+color: white;
+list-style: none;
+  
+}
+
+.border{
+  background-color: rgb(43, 42, 42);
+}
+
+.border p{
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.border-top{
+  border-top: 1px solid white;
+  margin: 0px 40px;
+  padding: 25px 0px;
 }

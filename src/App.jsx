@@ -4,26 +4,27 @@ import './App.css';
 import axios from "axios";
 import { useState, useEffect,} from "react";
 import Header from "./components/Header";
+import Footer from "./components/Footer"
+import Products from './components/Products';
+
 
 function App() {
   const [products, setProducts] = useState([]);
 
-  
-
   useEffect(() => {
-
     const getData = async() => {
+
     try{
       const apiCall = await axios.get('https://fakestoreapi.com/products');
-      setProducts(apiCall.data)
-      
+      setProducts(apiCall.data) 
     }
+
     catch(error){
-      console.log("error", error);
-      
+      console.log("error", error);  
     }
 
   }
+
   getData()
 
   },[])
@@ -31,28 +32,12 @@ function App() {
   return (
     <div className="App">
       <Header/>
+
       <div className="cards">
+        <Products products={products}/>
+      </div>
 
-        {products.map((eachproduct, i) => {
-        return(
-        
-
-          <div className="card" key={i}>
-            <div className="img">
-              <img src={eachproduct.image} alt="" />
-            </div>
-            <div className="detail">
-            <p>{eachproduct.title}</p>
-            <h4>${eachproduct.price}</h4>
-            </div>
-            <button className='cart' onClick={() => {alert("Add to Cart SuccessFully")}}>Add to Cart</button>
-          </div>
-
-
-        )
-      })}
-
-        </div>
+      <Footer />
 
       
 
