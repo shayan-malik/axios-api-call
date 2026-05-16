@@ -1,13 +1,11 @@
 const Products = ({products}) => {
     return(
         <>
-            {products.map((eachproduct, i) => {
+            {products.map((eachproduct) => {
         return(
-        
-
-          <div className="card" key={i}>
+          <div className="card" key={eachproduct.id}>
             <div className="img">
-              <img src={eachproduct.image} alt="" />
+              <img src={eachproduct.images[0]} alt={eachproduct.title} />
             </div>
             <div className="detail">
             <p>{eachproduct.title}</p>

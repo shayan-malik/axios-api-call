@@ -18,18 +18,17 @@ header{
 }
 header ul{
   display: flex;
-  gap: 25px;
+  gap: 20px;
   justify-content: space-between;
   list-style: none;
 }
 
 header li{
   cursor: pointer;
-  font-size: 18px;
   position: relative;
-  padding-bottom: 4px;
-  transition: all 0.5s ease-in-out;
-
+  transition: all 0.4s ease-in-out;
+  padding-bottom: 5px;
+  
 }
 
 header li::after{
@@ -40,13 +39,25 @@ header li::after{
   width: 0%;
   height: 2px;
   background-color: white;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 header li:hover::after{
   width: 100%;
 }
 
+header ul li a{
+  color: white;
+  text-decoration: none;
+  padding: 3px 8px ;
+}
+
+header ul li a.active{
+  border-bottom: 2px solid;
+  color: rgb(185, 185, 185);
+  font-weight: 500;
+
+}
 
 .cards{
   display: flex;
@@ -121,6 +132,7 @@ header li:hover::after{
   background-image: linear-gradient(to right, white, rgb(122, 120, 120));
   font-size: 16px;
   font-weight: bold;
+
 }
 
 .card:hover .cart{
@@ -139,7 +151,7 @@ header li:hover::after{
 .detail p{
   width: 100%;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .detail h4{
